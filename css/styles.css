@@ -1,0 +1,208 @@
+/********** Base styles **********/
+* {box-sizing: border-box;}
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 1rem;
+}
+body {
+    min-height: 100vh;
+    color: #4e4e4e;
+    font-size: 1em;
+    margin: 0;
+    font: 300 18px/1.5 "Roboto";
+}
+ul,li { 
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+    color: #4c4c4c;
+} 
+blockquote {
+    border-left: 6px solid #3dc7c7;
+    padding-left: 30px !important;
+    margin-left: 0;
+    line-height: 2;
+    font-style: italic;
+}
+.cell img {display: block; box-shadow: 3px 6px 12px #aaaaaa;}
+.responsive-image {max-width: 100%;}
+.cell {margin: 1rem;}
+
+/********** Navbar styles **********/
+nav {
+    box-shadow: 0 0 12px #3c3c3c;
+}
+.navbar {
+    display: flex;
+}
+.menu {
+    display: flex;
+    margin-left: auto;
+}
+h1.type-lockup-logo {
+    font-family: "Great Vibes";
+    margin: 0;
+}
+
+.homepage-hover h1 a {
+    display: inline-block;
+    padding: 22px 10px;
+    transition: all 0.4s
+}
+.menu > li > a {
+    display: inline-block;
+    padding: 27px 12px;
+    font-size: 20px;
+    transition: all 0.4s;
+}
+
+.homepage-hover h1 a:hover {
+    background: #3dc7c7;
+    color: white;
+}
+.menu > li > a:hover {
+    background: #3dc7c7;
+    color: white;
+}
+
+/********** General Content styles **********/
+.background-image {
+    background: url("../img/background-image.jpeg") center center no-repeat;
+    min-height: 91vh;
+    color: white;
+}
+.flex-vertical-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.flex-vertical-item {
+    margin: 10px auto;
+    max-width: 1200px;
+    text-align: center;
+}
+header > h1 ~ p:first-of-type {
+    font-size: 24px;
+}
+p.flex-vertical-item {
+    max-width: 25%;
+}
+.container > h1, .column-1 > h1, .container > h2, .column-2 > h2 {
+    border-bottom: 2px solid #3dc7c7;
+    text-align: left;
+    margin: 0;
+    width: 33%;
+}
+.container > .column-1 > p {
+    width: 75%;
+    padding-top: 20px;
+    line-height: 2;
+}
+img[src="img/profile-picture.jpeg"] {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 100%;
+    box-shadow: 0 0 24px #2c2c2c;
+    margin: 10px 0;
+}
+
+/********** Other Pages **********/
+.flex-vertical-item, .other-flex-vertical-item {
+    text-shadow: 1px 1px 6px #4e4e4e;
+}
+p.gallery-flex-vertical-item, p.other-flex-vertical-item {
+    font-size: 24px;
+    margin: 0;
+}
+.gallery-background-image, .about-background-image, .contact-background-image {
+    color: white;
+    min-height: 50vh;
+}
+.gallery-background-image {
+    background: url("../img/gallery-background-image.jpeg") center center no-repeat;
+}
+.about-background-image {
+    background: url("../img/about-background-image.jpeg") center center no-repeat;
+}
+.contact-background-image {
+    background: url("../img/contact-background-image.jpeg") center center no-repeat;
+}
+.section-1 {
+    padding: 80px 0;
+}
+.section-1 > .container > p {
+    padding: 20px 0;
+    line-height: 2;
+}
+
+/* Two column layout */
+.flex-container-row {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+img[src="img/my-story.jpeg"] {
+    border-radius: 20px;
+}
+
+/* Three column layout */
+.three-column-layout {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+.three-column-layout img {
+    width: 200px;
+    padding: 60px 0 20px;
+    display: block;
+    margin: 0 auto;
+}
+.three-column-layout > div > p:first-of-type {
+    font-size: 24px;
+}
+.services-background-image {
+    background-image: url("../img/repeat-background.png");
+    padding: 80px 0;
+}
+.services-title {
+    text-align: center;
+}
+.services-title > h1 {
+    margin: 0;
+}
+
+
+/********** Social Media Icons **********/
+.social-media-icons {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+.social-media-icons > img {
+    width: 42px;
+    padding-right: 6px;
+}
+
+/********** Responsive Styles **********/
+@media screen and (min-width: 600px) {
+    .grid {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    }
+    .cell {
+    width: calc(50% - 2rem);
+    }
+
+}
+@media screen and (min-width: 1000px) {
+    .cell {
+    width: calc(33.3333% - 2rem);
+    }
+}   
