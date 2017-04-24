@@ -1,5 +1,7 @@
 /********** Base styles **********/
-* {box-sizing: border-box;}
+* {
+    box-sizing: border-box;
+}
 .container {
     margin: 0 auto;
     max-width: 1200px;
@@ -17,25 +19,32 @@ ul,li {
     padding: 0;
     list-style-type: none;
 }
+h1 {
+    font-weight: 300;
+}
 a {
     text-decoration: none;
     color: #4c4c4c;
 } 
 blockquote {
-    border-left: 6px solid #3dc7c7;
+    border-left: 4px solid #3dc7c7;
     padding-left: 30px !important;
     margin-left: 0;
     line-height: 2;
     font-style: italic;
 }
-.cell img {display: block; box-shadow: 3px 6px 12px #aaaaaa;}
-.responsive-image {max-width: 100%;}
-.cell {margin: 1rem;}
+.cell img {
+    display: block; 
+    box-shadow: 3px 6px 12px #aaaaaa;
+}
+.responsive-image {
+    max-width: 100%;
+}
+.cell {
+    margin: 1rem;
+}
 
 /********** Navbar styles **********/
-nav {
-    box-shadow: 0 0 12px #3c3c3c;
-}
 .navbar {
     display: flex;
 }
@@ -43,15 +52,18 @@ nav {
     display: flex;
     margin-left: auto;
 }
-h1.type-lockup-logo {
+h1.type-lockup-logo, .type-lockup-logo > a {
     font-family: "Great Vibes";
+    color: #3dc7c7 !important;
     margin: 0;
+    font-size: 48px;
+    font-weight: bold;
 }
 
 .homepage-hover h1 a {
     display: inline-block;
-    padding: 22px 10px;
-    transition: all 0.4s
+    padding: 6px 10px;
+    transition: all 0.4s;
 }
 .menu > li > a {
     display: inline-block;
@@ -62,7 +74,7 @@ h1.type-lockup-logo {
 
 .homepage-hover h1 a:hover {
     background: #3dc7c7;
-    color: white;
+    color: white !important;
 }
 .menu > li > a:hover {
     background: #3dc7c7;
@@ -71,7 +83,7 @@ h1.type-lockup-logo {
 
 /********** General Content styles **********/
 .background-image {
-    background: url("../img/background-image.jpeg") center center no-repeat;
+    background: url("../img/background-image.jpg") center center no-repeat;
     min-height: 91vh;
     color: white;
 }
@@ -87,7 +99,7 @@ h1.type-lockup-logo {
     text-align: center;
 }
 header > h1 ~ p:first-of-type {
-    font-size: 24px;
+    font-size: 22px;
 }
 p.flex-vertical-item {
     max-width: 25%;
@@ -113,7 +125,7 @@ img[src="img/profile-picture.jpeg"] {
 
 /********** Other Pages **********/
 .flex-vertical-item, .other-flex-vertical-item {
-    text-shadow: 1px 1px 6px #4e4e4e;
+    text-shadow: 1px 1px 6px #333333;
 }
 p.gallery-flex-vertical-item, p.other-flex-vertical-item {
     font-size: 24px;
@@ -139,16 +151,17 @@ p.gallery-flex-vertical-item, p.other-flex-vertical-item {
     padding: 20px 0;
     line-height: 2;
 }
-
-/* Two column layout */
-.flex-container-row {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-}
-
+/* About Page */
 img[src="img/my-story.jpeg"] {
     border-radius: 20px;
+}
+/* Two column layout */
+.flex-container-row, .two-column-layout, .footer-row {
+    display: flex;
+    flex-direction: row;
+}
+.two-column-layout {
+    align-items: center;
 }
 
 /* Three column layout */
@@ -176,7 +189,33 @@ img[src="img/my-story.jpeg"] {
 .services-title > h1 {
     margin: 0;
 }
+/********** Testimonials **********/
+.two-column-layout {
+    padding: 30px 1rem;
+}
+.two-column-layout > div > img {
+    width: 250px;
+    border-radius: 50%;
+}
+.second-column {
+    padding-left: 60px;
+}
+.second-column > p {
+    font-style: italic;
+}
+.second-column > p + p {
+    font-size: 24px;
+}
 
+/********** Footer **********/
+footer {
+    color: #4c4c4c;
+    font-weight: 400;
+}
+.footer-row {
+    border-top: 1px solid #dddddd;
+    justify-content: space-between;
+}
 
 /********** Social Media Icons **********/
 .social-media-icons {
@@ -189,7 +228,6 @@ img[src="img/my-story.jpeg"] {
     padding-right: 6px;
 }
 
-/********** Responsive Styles **********/
 @media screen and (min-width: 600px) {
     .grid {
     display: flex;
