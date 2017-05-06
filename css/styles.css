@@ -54,7 +54,7 @@ blockquote {
 }
 h1.type-lockup-logo, .type-lockup-logo > a {
     font-family: "Great Vibes";
-    color: #888888 !important;
+    color: #777777 !important;
     margin: 0;
     font-size: 48px;
     font-weight: bold;
@@ -216,6 +216,15 @@ footer {
     border-top: 1px solid #dddddd;
     justify-content: space-between;
 }
+.footer-right-column {
+    display: flex;
+    align-items: center;
+}
+.footer-right-column > ul > li {
+    display: inline-block;
+    padding: 0 10px;
+}
+
 
 /********** Social Media Icons **********/
 .social-media-icons {
